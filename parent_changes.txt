@@ -1,0 +1,108 @@
+1)	functions.php:	Changed Image sizes
+
+		// Image sizes
+		'image-sizes' => array(
+			array(
+				'name'		=> 'size-format',
+				'width'		=> 720,
+				'height'	=> 0,
+				'crop'		=> FALSE
+			),
+			array(
+				'name'		=> 'size-thumbnail-tiny',
+				'width'		=> 96,
+				'height'	=> 64,
+				'crop'		=> TRUE
+			),
+			array(
+				'name'		=> 'size-thumbnail-tabs',
+				'width'		=> 192,
+				'height'	=> 128,
+				'crop'		=> TRUE
+			),
+			array(
+				'name'		=> 'size-thumbnail-small',
+				'width'		=> 297,
+				'height'	=> 140,
+				'crop'		=> TRUE
+			),
+			array(
+				'name'		=> 'size-thumbnail-medium',
+				'width'		=> 520,
+				'height'	=> 245,
+				'crop'		=> TRUE
+			),
+			array(
+				'name'		=> 'size-thumbnail-large',
+				'width'		=> 720,
+				'height'	=> 340,
+				'crop'		=> TRUE
+			),
+		),
+		
+2)	/widgets/widget-tabs.php	Changes the following line twice
+
+		$thumb = get_the_post_thumbnail($id, 'size-thumbnail-tabs');	-> $thumb = get_the_post_thumbnail($id, 'size-thumbnail-tiny');
+		
+3)	/style-responsive.css		Comment the following
+
+	There are 2 differnent sections of responsive CSS for the social widget.  
+		Search for "social" in this file and comment out both sections.  
+		We want no responsive css for the social widget at all
+	
+	Also comment out the following section
+	/*
+	.entry-share { position: relative; float: left; width: auto; padding: 0; margin-top: 20px; }
+	.entry-share span { text-align: left; }
+	.entry-share > div { float: left; margin-right: 10px; } 
+	*/
+	
+	And just the .entry-part section of this @media block
+	
+	@media only screen and (min-width: 960px) and (max-width: 1024px) {
+	/* .entry-part { padding-right: 100px; } */
+	.entry-share { padding-right: 0; }
+	}
+
+4) /plugins/nextgen-gallery/css/nggallery.css
+	
+	Need to fix the thumbnail display in IE8.  Update the following block
+	
+.ngg-gallery-thumbnail {
+	float: left;
+	margin-right: 5px;
+	text-align: center;
+	width:100px;
+	padding-right:10px;
+}
+
+/* Fix IE8 display issue */
+.ngg-gallery-thumbnail {
+ width:100px!important;
+ padding-right:10px!important;
+ }
+ 
+5) /plugins/nextgen-gallery/view/gallery.php
+
+ /* Modify default NexGen gallery display with shortcode */
+
+	Add a Title display above the gallery output.
+	
+Change this:
+
+<div class="ngg-galleryoverview" id="<?php echo $gallery->anchor ?>">
+ 
+To this:
+
+<h4><?php echo $gallery->title; ?></h4>
+<div class="ngg-galleryoverview" id="<?php echo $gallery->anchor ?>">
+
+6) /plugins/nextgen-gallery/admin/manage-images.php
+
+/* Fix the parenet drop-down on new galleries */
+
+						<?php //if (get_post()): ?>
+						<?php parent_dropdown (); ?>
+						<?php //endif ?>
+						
+

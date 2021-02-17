@@ -1,0 +1,824 @@
+/*
+Theme Name: Typegrid Child
+Theme URI: http://wpbandid.com
+Version: 1.1
+Author: WPBandid (Modified by Motrolix)
+Author URI: http://wpbandid.com
+Template: typegrid11
+*/
+
+@import url("../typegrid11/style.css");
+/* Fix previous/next navigation */
+.content .entry-browse li.next,
+.content-part .entry-browse li.next { width: 47%!important; }
+.content-part .entry-browse li.previous { width: 47%!important; }
+
+/****************************************************************************************/
+/* Andrew Froehlich		4/72013															*/
+/* This enables the top header ad space when the screen is moble.   We use a javascript */
+/* file to switch out the ad to mobile size instead	of hiding the ad space 				*/
+/****************************************************************************************/
+/***************************************/
+/* Very top of page: header-top-center */
+/***************************************
+@media only screen and (min-width: 760px) {
+	#header-replace-container {
+		display: none!important;
+	}
+}
+*/
+
+@media only screen and (max-width: 330px) {
+	#header-replace-wrapper {
+		margin-left: -15px;
+	}
+}
+
+#header-replace-wrapper {
+	text-align: center;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 470px;
+}
+
+#header-replace-wrapper:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#header-replace-container {
+	text-align: center;
+	float: left;
+	width: 100%;
+}
+
+/************************************/
+/* Logo Area in Header: header-logo */
+/************************************/
+
+@media only screen and (max-width: 1000px) {
+	#header-logo-container-left {
+		width: 20%;
+	}
+
+	#header-logo-container-center {
+		width: 40%;
+		max-width: 468px;
+	}
+
+	#header-logo-container-right {
+		width: 30%;
+	}
+}
+
+@media only screen and (max-width: 760px) {
+	#header-logo-container-center {
+		display: none!important;
+	}
+
+	#header-logo-container-left {
+		width: 50%!important;
+	}
+}
+
+#header-logo-wrapper {
+	text-align: center;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header-logo-wrapper:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#header-logo-container-left {
+	padding: 0 0 0 10px;
+	text-align: center;
+	float: left;
+	width: 12%;
+	min-width: 110px;
+}
+
+#header-logo-container-center {
+	text-align: center;
+	float: left;
+	width: 70%;
+}
+
+#header-logo-container-right {
+	text-align: center;
+	float: left;
+	width: 17%;
+	min-width: 140px;
+}
+
+/*******************************************/
+/* Below 2nd menu in header: header-bottom */
+/*******************************************/
+@media only screen and (max-width: 1090px) {
+	#header-bottom-container-right {
+		display: none!important;
+	}
+}
+
+@media only screen and (max-width: 910px) {
+	#header-bottom-container-left {
+		display: none!important;
+	}
+	#header-bottom-container-center {
+		width: 100%!important;
+	}
+}
+
+@media only screen and (min-width: 760px) {
+	#header-bottom-container-center {
+		display: none!important;
+	}
+}
+
+#header-bottom-wrapper {
+	text-align: center;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1100px;
+}
+
+#header-bottom-wrapper:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#header-bottom-container-left {
+	text-align: center;
+	float: left;
+	width: 15%;
+	min-width: 160px;
+}
+
+#header-bottom-container-center {
+	text-align: center;
+	float: left;
+	width: 70%;
+	/* border: 1px solid black; */
+}
+
+#header-bottom-container-right {
+	text-align: center;
+	float: left;
+	width: 15%;
+	min-width: 160px;
+}
+
+/*******************************************/
+/* Single Ad area in content: ads-content  */
+/*******************************************/
+#ads-content-wrapper {
+	text-align: center;
+	padding: 0;
+	margin-top: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 900px;
+}
+
+#ads-content-wrapper:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#ad-content-container {
+	text-align: center;
+	min-width: 300px;
+	/* border: 1px solid black; */
+}
+
+#ad-content-center {
+	/* border: 1px solid black; */
+}
+
+/*******************************************/
+/* Below Featured and Image : ads-content  */
+/*******************************************/
+/* @media only screen and (max-width: 331px) {
+ 	#featured-image-wrapper {
+ 		margin-left: -5px!important;
+ 	}
+} */
+
+#featured-image-wrapper {
+	text-align: center;
+	padding: 0;
+	margin-top: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 900px;
+}
+
+#featured-image-wrapper:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#featured-image-container {
+	text-align: center;
+	min-width: 300px;
+	/* border: 1px solid black; */
+}
+
+/**********************************************/
+/* Footer Ad area in content: footer-content  */
+/**********************************************/
+@media only screen and (max-width: 340px) {
+	#footer-container {
+		margin-left: -15px!important;
+	}
+}
+
+#footer-wrapper {
+	text-align: center;
+	padding: 0;
+	margin-top: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 900px;
+}
+
+#footer-wrapper:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#footer-container {
+	text-align: center;
+	min-width: 300px;
+}
+
+/*****************************/
+/* Sidebar ads: ads-sidebar  */
+/*****************************/
+#ads-sidebar-wrapper {
+	/* Set width too large on purpose */
+	text-align: center;
+	padding: 0;
+	margin-left:-10px;
+	margin-right: auto;
+	width: 1000px;
+}
+
+#ads-sidebar-wrapper:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#ad-sidebar-container-120 {
+	text-align: center;
+	float: left;
+	min-width: 125px;
+}
+
+#ad-sidebar-container-160 {
+	text-align: center;
+	float: left;
+	min-width: 165px;
+}
+
+/**********************************************/
+/* Social on Single Page:   social-single     */
+/**********************************************/
+@media only screen and (max-width: 600px) {
+	#image-social-single {
+		max-width: 100%!important;
+	}
+
+	.entry-share { position: relative; float: left; width: auto; padding: 0; margin-top: 20px; margin-left: auto; margin-right: auto;}
+	.entry-share span { text-align: left; }
+	.entry-share > div { float: left; margin-right: 10px; }
+}
+
+#image-social-single {
+	max-width: 90%;
+}
+
+.entry-share {
+    padding: 0px!important;
+}
+
+.entry-part {
+    min-height: 20px!important;
+    padding-right: 0px!important;
+	padding-bottom: 0px!important;
+}
+
+/*****************************/
+/* BBPress Fixes             */
+/*****************************/
+
+/* Fix bbpress layout */
+@media only screen and (max-width: 400px) {
+	li.bbp-forum-topic-count, li.bbp-topic-voice-count, li.bbp-forum-reply-count, li.bbp-topic-reply-count {
+		display: none!important;
+	}
+
+	li.bbp-forum-info, li.bbp-topic-title {
+    width: 75%!important;
+	}
+
+
+	#bbpress-forums div.bbp-forum-content, #bbpress-forums div.bbp-topic-content, #bbpress-forums div.bbp-reply-content {
+		margin-left: 2px!important;
+	}
+}
+
+/* Hide Search Bar */
+
+#bbpress-forums div.bbp-search-form {
+    display: none!important;
+}
+
+/* Fix breadcrumb issue */
+div.bbp-breadcrumb {
+    float: none !important;
+}
+/*****************************/
+/* Other                     */
+/*****************************/
+
+/* Fix the nested <ol> */
+.text ul li {
+    list-style: square !important;
+}
+
+/* Fix the table li */
+ul.tabs-nav li {
+    list-style: none !important;
+}
+
+/* Change featured header margin */
+.hr.featured { margin-top: 10px; margin-bottom: 10px; }
+
+/* Change margin under post blocks on home page */
+.entry-row {
+    margin-bottom: 15px!important;
+}
+
+/* Change padding in header */
+#header .pad {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/* Fix logo image */
+#logo a img {
+    max-height: 100px;
+}
+
+#logo {
+    padding: 0;
+}
+
+ul.children{
+	margin-left: 10px;
+}
+
+/* Social Icons */
+.social-module {
+	float: left;
+	padding: 10px 0 0;
+	position: relative;
+	z-index: 2;
+}
+
+/* YouTube Embed Responsive */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wp-table-reloaded-table-name {
+    font-size: 18px!important;
+}
+
+body, p, a {
+	word-wrap: break-word!important;
+}
+
+/* NextGen Gallery */
+.ngg-album-compactbox {
+	background: none!important;
+	width: 110px !important;
+}
+
+.ngg-album-compact h4 {
+	margin-top: 3px !important;
+	font-size: 14px !important;
+	width: 110px !important;
+}
+
+.ngg-album-compact p {
+	font-size: 10px;
+	width: 110px !important;
+}
+
+.ngg-album-compact {
+	height: 230px !important;
+	display: inline-block !important;
+	vertical-align: bottom !important;
+}
+
+.ngg-gallery-thumbnail {
+	margin: 3px !important;
+}
+
+.ngg-gallery-thumbnail img {
+	padding: 0px !important;
+}
+
+#subscription-toggle {
+	margin-left: 30px !important;
+}
+
+#s2member-pro-stripe-checkout-options, #s2member-pro-stripe-registration-options {
+	font-size: 30px !important;
+}
+
+/* Print Settings */
+
+@media print {
+        #nav-header, #header-logo-container-center, #header-logo-container-right, #nav-subheader, .entry-comments, #sidebar, .sidebar, #sidebar-right, .sidebar-content, .entry-share, .entry-browse, .related, .heading.related, #respond, #footer, .video-container, #header-bottom-wrapper, #featured-image-container, .alert, #ads-content-wrapper, .avatar, img#wpstats, #comments, #header-replace-wrapper {
+                display:none!important;
+        }
+
+        #page {
+                padding-bottom: 0!important;
+                border: 0!important;
+                background: none!important;
+        }
+
+        .container-inner {
+                border-width: 0 !important;
+        }
+
+        .sidebar-right, .main {
+                padding-right: 0!important;
+                background: none!important;
+        }
+
+        #header-logo-wrapper {
+                background: white!important;
+        }
+
+        .content-part {
+                width: 100%;
+                border-width: 0!important;
+        }
+
+	.commentlist li .comment-body {
+		background: none!important;
+	}
+
+	/* ----------- Gallery style -------------*/
+
+	.ngg-galleryoverview {
+		overflow: hidden;
+		margin-top: 10px;
+		width: 100%;
+		clear:both;
+		display:block !important;
+	}
+
+	.ngg-galleryoverview .desc {
+		margin:0px 10px 10px 0px;
+   		padding:5px;
+	}
+
+	.ngg-gallery-thumbnail-box {
+		float: left;
+	}
+
+	.ngg-gallery-thumbnail {
+		float: left;
+		margin-right: 5px;
+	}
+
+	.ngg-gallery-thumbnail img {
+		background-color:#FFFFFF;
+		border:1px solid #A9A9A9;
+		display:block;
+		margin:4px 0px 4px 5px;
+		padding:4px;
+		position:relative;
+	}
+
+	.ngg-gallery-thumbnail img:hover {
+		background-color: #A9A9A9;
+	}
+
+	.ngg-gallery-thumbnail span {
+		font-size:90%;
+		padding-left:5px;
+		display:block;
+	}
+
+	.ngg-clear {
+		clear: both;
+	}
+
+
+
+}
+
+/*****************************/
+/* Sticky post styling       */
+/* Kyree S. Williams         */
+/* 7-17-2019                 */
+/*****************************/
+
+.entry-sticky-item {
+  border-bottom: 1px solid #eee;
+  margin-left: -30px;
+  margin-right: -30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 15px;
+  padding-bottom: 32px;
+}
+
+.entry-sticky-item a {
+  display: block;
+  height: 300px;
+  width: 100%;
+  background-color: #eee;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  box-sizing: border-box;
+  padding: 16px;
+  border-top: 8px solid #83ad02;
+  border-bottom: 8px solid #0088b2;
+}
+.entry-sticky-item a::before {
+  display: block;
+  height: 100%;
+  width: 100%;
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+  opacity: 0.7;
+  background: -moz-linear-gradient(left,  rgba(19,19,19,1) 0%, rgba(54,54,54,0.75) 61%, rgba(73,73,73,0.3) 94%, rgba(76,76,76,0.13) 100%, rgba(76,76,76,0.1) 101%);
+  background: -webkit-linear-gradient(left,  rgba(19,19,19,1) 0%,rgba(54,54,54,0.75) 61%,rgba(73,73,73,0.3) 94%,rgba(76,76,76,0.13) 100%,rgba(76,76,76,0.1) 101%);
+  background: linear-gradient(to right,  rgba(19,19,19,1) 0%,rgba(54,54,54,0.75) 61%,rgba(73,73,73,0.3) 94%,rgba(76,76,76,0.13) 100%,rgba(76,76,76,0.1) 101%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#1a4c4c4c',GradientType=1 );
+}
+.entry-sticky-item a:hover::before {
+  opacity: 1;
+}
+.entry-sticky-item a * {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+.entry-sticky-item-inner {
+  max-width: 600px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.entry-sticky-item-date {
+  font-family: "Fjalla One", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.entry-sticky-item-title {
+  font-size: 40px;
+  line-height: 1.25em;
+}
+.entry-sticky-item-featured-tag {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  padding: 2px 20px 10px 20px;
+  background-color: #83ad02;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Fjalla One", sans-serif;
+  text-transform: uppercase;
+  text-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px;
+}
+.entry-sticky-item-cta-tag {
+  position: absolute !important;
+  bottom: 0;
+  right: 0;
+  padding: 15px 40px 7px 40px;
+  background-color: #0088b2;
+  display: inline-block;
+  font-size: 24px;
+  font-family: "Fjalla One", sans-serif;
+  text-transform: uppercase;
+  text-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px;
+}
+@media (max-width: 718px) {
+  .entry-sticky-item a {
+    height: 400px;
+  }
+  .entry-sticky-item-date {
+    font-size: 16px;
+  }
+  .entry-sticky-item-title {
+    font-size: 36px;
+  }
+}
+
+/*****************************/
+/* iFrame Shortcode          */
+/* Kyree S. Williams         */
+/* 7-18-2019                 */
+/*****************************/
+
+div.motrolix-iframe-shortcode-container {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+div.motrolix-iframe-shortcode-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/**
+ * inline sign-up form styling
+ */
+#mtrlx-inline-sign-up-form {
+  border: 1px solid rgb(220,220,220);
+  background-color: rgb(249, 249, 249);
+  padding: 20px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+#mtrlx-inline-sign-up-form-title span:nth-of-type(1) {
+  /* color: #1e73be; */
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: -0.5rem;
+  display: block;
+  font-weight: 700;
+}
+#mtrlx-inline-sign-up-form-title span:nth-of-type(2) {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+/* #mtrlx-inline-sign-up-form form {
+  font-size: 0;
+} */
+#mtrlx-inline-sign-up-form label {
+  font-size: 0;
+}
+#mtrlx-inline-sign-up-form input {
+  font-size: 1rem;
+}
+#mtrlx-inline-sign-up-form input[type=text], input[type=email] {
+  width: 30%;
+  display: inline;
+}
+#mtrlx-inline-sign-up-form input[type="submit"] {
+  display: inline-block;
+  margin-top: 10px;
+}
+#mtrlx-inline-sign-up-form-status {
+  color: #000;
+}
+#mtrlx-inline-signup-form-promise-1 {
+  margin-top: 20px;
+  margin-bottom: 0.5rem;
+}
+#mtrlx-inline-signup-form-promise-2 {
+  margin: 0;
+}
+.text .gallery-columns-5 .gallery-caption, .text .gallery-columns-6 .gallery-caption, .text .gallery-columns-7 .gallery-caption, .text .gallery-columns-8 .gallery-caption, .text .gallery-columns-9 .gallery-caption {
+  display: block !important;
+  position: static !important;
+}
+.comment-form-cookies-consent {
+  display: none;
+}
+#commentform .submit {
+  clear: both;
+  margin-top: 20px;
+}
+/* combo category feed */
+.mtxcg-feed {
+  margin-bottom: 20px;
+}
+.mtxcg-feed .entry-list {
+  margin: 0 -30px 0 0 !important;
+  list-style: none !important;
+}
+.mtxcg-feed .entry-row {
+  list-style: none !important;
+}
+.mtxcg-feed .entry-meta {
+  margin-left: 0 !important;
+}
+.mtxcg-feed .entry-title {
+  font-size: 24px !important;
+}
+.mtxcg-feed-title {
+  margin-bottom: 30px !important;
+  font-size: 24px !important;
+}
+.mtxcg-feed-show-more-container {
+  /* margin-top: 20px; */
+}
+.mtxcg-feed-show-more-container a {
+  background: #0088b2 !important;
+  color: #fff !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+  padding: 8px 14px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 16px !important;
+}
+/* Design fixes 2/5/21 */
+#ads-header-wrapper {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 900px;
+}
+#twitter-widget-0 {
+  float: left;
+  margin-bottom: 10px;
+}
+a.button.logout-link {
+  margin: 10px;
+}
+#header-logo-container-center {
+  margin-bottom: 2%;
+}
+.entry-nav {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  #ads-header-wrapper {
+    margin-right: -16px;
+  }
+}
